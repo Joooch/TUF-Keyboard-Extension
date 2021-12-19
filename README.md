@@ -35,7 +35,9 @@
         - Open `.sln` file using Visual Studio
         - TopBar -> Build Solution
     - DotNet:
-        ```sh dotnet build```
+        ```sh
+        dotnet build
+        ```
 2. Import `ACPIWMI.dll` (aka keyboard library)
     - Go to `C:\Program Files\ASUS\ARMOURY CRATE Service\AuraPlugIn\`
     - Copy `ACPIWMI.dll` to the folder with the compiled program. ( `project/bin/Release/` by default )
