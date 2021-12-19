@@ -13,8 +13,9 @@
   </p>
 </div>
 
-## Recommendations
-- I do not recomment u to use this program. This program was created by a beginner for fun and may cause some problems.
+## To protect myself
++ I do not recomment u to use this program.
++ **This program was created by a beginner for fun and may cause some problems.**
 
 ## Features
 + Music visualization
