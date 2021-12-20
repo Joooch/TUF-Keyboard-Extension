@@ -1,6 +1,6 @@
 ﻿<br />
 <div align="center">
-  <a href="https://github.com/Joooch/TUF-Keyboard-Lights">
+  <a href="https://github.com/Joooch/TUF-Keyboard-Extension">
     <img src="logo.ico" alt="Logo" width="128" height="128">
   </a>
 
