@@ -3,7 +3,7 @@ using System.Timers;
 
 namespace TUF_Keyboard_Extension.Modes
 {
-    class BaseMode
+    abstract class BaseMode
     {
         protected KeyboardAPI keyboardAPI { get; set; }
         private Timer timer { get; set; }
