@@ -44,6 +44,14 @@ namespace TUF_Keyboard_Extension
                 currentMode = new KeyPressMode(keyboardAPI, tickTimer);
                 currentMode.Start();
             });
+            contextMenu.Items.Add("KeyPress Sensor (Reversed)", null, (s, e) => {
+                currentMode?.Dispose();
+                currentMode = null;
+
+                currentMode = new ReversedKeyPressMode(keyboardAPI, tickTimer);
+                currentMode.Start();
+            });
+
             contextMenu.Items.Add("Music Visualization", null, (s, e) => {
                 currentMode?.Dispose();
                 currentMode = null;

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="KeyboardAPI.cs" />
     <Compile Include="Modes\BaseMode.cs" />
+    <Compile Include="Modes\ReversedKeyPressMode.cs" />
     <Compile Include="Modes\KeyPressMode.cs" />
     <Compile Include="Modes\MusicMode.cs" />
     <Compile Include="Program.cs" />

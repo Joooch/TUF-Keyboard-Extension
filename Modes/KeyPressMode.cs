@@ -1,4 +1,5 @@
 ﻿using Keystroke.API;
+using Keystroke.API.CallbackObjects;
 using System;
 using System.Timers;
 
@@ -9,7 +10,12 @@ namespace TUF_Keyboard_Extension.Modes
         KeystrokeAPI keystrokeAPI;
         public KeyPressMode(KeyboardAPI api, Timer timer) : base(api, timer) { }
 
-        private float colorValue;
+        protected float colorValue;
+
+        protected virtual void OnKeyPress(KeyPressed key)
+        {
+            colorValue = Math.Min(colorValue + 100, 255);
+        }
 
         protected override void Initialize()
         {
@@ -18,13 +24,11 @@ namespace TUF_Keyboard_Extension.Modes
             colorValue = 0;
 
             keystrokeAPI = new KeystrokeAPI();
-            keystrokeAPI.CreateKeyboardHook((key) =>
-            {
-                colorValue = Math.Min(colorValue + 100, 255);
-            });
+            keystrokeAPI.CreateKeyboardHook(OnKeyPress);
         }
 
-        static float Lerp(float firstFloat, float secondFloat, float by)
+
+        protected float Lerp(float firstFloat, float secondFloat, float by)
         {
             return firstFloat * (1 - by) + secondFloat * by;
         }
